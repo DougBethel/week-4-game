@@ -1,0 +1,68 @@
+body {
+  background-color: lightgray;
+  z-index: -1;
+}
+.mainheader {
+  float: left;
+  width: 400px;
+  background-color: #c97126;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+.instructions {
+  clear: both;
+  float: left;
+  width: 500px;
+  background-color: #fbe6cc;
+  color: green;
+}
+
+#randomNumber {
+clear: both;
+float:left;
+background-color: #5bca7b;
+color: blue;
+text-align: center;
+font-size: 70px;
+Padding: 30px;
+width: 120px;
+margin-top:10px;
+}
+
+.win-loss {
+float:left;
+background-color: #4bfdfc;
+color: blue;
+width: 100px;
+text-align: center;
+padding: 20px;
+margin: 10px;
+height: 100px;
+}
+
+.buttondiv {
+  clear: both
+}
+
+#crystal1 {
+
+}
+.scoreindicator {
+  background-color:#74bda2;
+  margin-top: 10px;
+  padding: 20px;
+  color:white;
+  width: 150px;
+  text-align:center;
+}
+
+#userNumber {
+  background-color:#74bda2;
+  margin-top: 10px;
+  padding: 20px;
+  color:white;
+  width: 150px;
+  text-align:center;
+  font-size: 70px;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Crystal Collector</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+    var computerNumber = Math.floor(Math.random() * (121 - 19) + 19);
+    var random1 = Math.floor(Math.random()*11+1);
+    var random2 = Math.floor(Math.random()*11+1);
+    var random3 = Math.floor(Math.random()*11+1);
+    var random4 = Math.floor(Math.random()*11+1);
+    var userTotal = 0;
+    var winTotal = 0;
+    var lossTotal = 0;
+
+
+
+
+function reset(){
+      computerNumber=Math.floor(Math.random()*101+19);
+      $('#randomNumber').text(computerNumber);
+      random1= Math.floor(Math.random()*11+1);
+      random2= Math.floor(Math.random()*11+1);
+      random3= Math.floor(Math.random()*11+1);
+      random4= Math.floor(Math.random()*11+1);
+      userTotal= 0;
+      $('#userNumber').text(userTotal);
+      }
+
+      function winMessage(){
+          alert("You win!");
+          winTotal++;
+        $('#Wins').text(winTotal);
+        reset();
+      }
+
+      function loser(){
+      alert ("You lose!");
+      lossTotal++;
+      $('#numberLosses').text(lossTotal);
+      reset();
+    }
+
+    $('#one').on ('click', function(){
+   userTotal = userTotal + random1;
+   console.log("New userTotal= " + userTotal);
+   $('#userNumber').text(userTotal);
+         //sets win/lose conditions
+       if (userTotal == computerNumber){
+         winMessage();
+       }
+       else if ( userTotal > computerNumber){
+         loser();
+       }
+     });
+
+     $('#two').on ('click', function(){
+    userTotal = userTotal + random2;
+    console.log("New userTotal= " + userTotal);
+    $('#userNumber').text(userTotal);
+          //sets win/lose conditions
+        if (userTotal == computerNumber){
+          winMessage();
+        }
+        else if ( userTotal > computerNumber){
+          loser();
+        }
+      });
+
+      $('#three').on ('click', function(){
+     userTotal = userTotal + random3;
+     console.log("New userTotal= " + userTotal);
+     $('#userNumber').text(userTotal);
+           //sets win/lose conditions
+         if (userTotal == computerNumber){
+           winMessage();
+         }
+         else if ( userTotal > computerNumber){
+           loser();
+         }
+       });
+
+       $('#four').on ('click', function(){
+      userTotal = userTotal + random4;
+      console.log("New userTotal= " + userTotal);
+      $('#userNumber').text(userTotal);
+            //sets win/lose conditions
+          if (userTotal == computerNumber){
+            winMessage();
+          }
+          else if ( userTotal > computerNumber){
+            loser();
+          }
+        });
+});
+  </script>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1 class="mainheader">Crystal Collector</h1>
+    <div class="instructions">
+      <p>You will be given a random at the start of the game.</p>
+      <br>
+      <p>There are 4 crystals below, by clicking you will add a specific amount of
+        points to your total score.</p>
+        <br>
+      <p> You win the game by adding your total score to equal the random number generated, if your score goes above the random number you lose</p>
+      <br>
+      <p>The value of each crystal is hidden from you till you click on it.</p>
+      <br>
+      <p>Each time the game starts each crystal will be given a random value.</p>
+    </div>
+    <div id="randomNumber">
+
+    </div>
+    <div class="win-loss">
+      <span>Wins: </span>
+      <span id="Wins"></span>
+      <br><br>
+      <span>Losses: </span>
+      <span id="losses"></span>
+    </div>
+    <div class="buttondiv">
+      <img id="one" src="images/greenjewel.jpg" height="100" width="100">
+      <img id="two" src="images/orangejewel.jpg" height="100" width="100">
+      <img id="three" src="images/pinkjewel.jpg" height="100" width="100">
+      <img id="four" src="images/yellowjewel.jpg" height="100" width="100">
+    </div>
+    <div class="scoreindicator">
+      <span>This is your Score</span>
+    </div>
+    <div id="userNumber">
+    </div>
+  </body>
+</html>
