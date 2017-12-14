@@ -9,6 +9,7 @@
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous"></script>
     <script type="text/javascript">
+
     $(document).ready(function() {
 
     var computerNumber = Math.floor(Math.random() * (121 - 19) + 19);
@@ -20,6 +21,7 @@
     var winTotal = 0;
     var lossTotal = 0;
 
+$('#randomNumber').text(computerNumber);
 
 
 
@@ -44,7 +46,7 @@ function reset(){
       function loser(){
       alert ("You lose!");
       lossTotal++;
-      $('#numberLosses').text(lossTotal);
+      $('#losses').text(lossTotal);
       reset();
     }
 
